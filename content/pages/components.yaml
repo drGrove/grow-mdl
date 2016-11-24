@@ -22,6 +22,59 @@ buttons:
     fab: True
   - content@: email
     icon: True
-    ripple: True
     fab: True
     mini_fab: True
+  - content@: Button
+    disabled: True
+  - content@: Button
+    colored: True
+  - content@: Button
+    accent: True
+  - content@: mood
+    icon: True
+  - content@: mood
+    icon: True
+    colored: True
+cards:
+  - title@: Welcome
+    title_size: 6
+    supporting_text@: |
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Mauris sagittis
+      pellentesque lacus eleifend lacinia...
+    depth: 2
+    actions_bordered: True
+    actions:
+      - content@: Get Started
+        ripple: True
+        colored: True
+    menu:
+      - content@: share
+        icon: True
+        ripple: True
+  - title@: Welcome
+    title_size: 6
+    supporting_text@: |
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Mauris sagittis
+      pellentesque lacus eleifend lacinia...
+    depth: 2
+    actions_bordered: True
+    actions:
+      - content@: Get Started
+        ripple: True
+        colored: True
+    menu:
+      - content@: share
+        icon: True
+        ripple: True
+chips:
+  - content@: Basic Chip
+  - content@: Deletable Chip
+    deletable: True
+    action_icon: cancel
+  - content@: Button Chip
+    button: True
+  - content@: Contact Chip
+    contact: True
+    contact_background: teal
+    contact_foreground: white
+    contact_content@: A

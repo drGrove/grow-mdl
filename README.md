@@ -41,3 +41,21 @@ Once you are ready to share your changes with your team, you can stage your work
 ```
 grow stage
 ```
+
+## Components
+
+- [x] Badges
+- [x] Buttons
+- [x] Cards
+- [x] Chips
+- [ ] Dialogs
+- [ ] Layout
+- [ ] Lists
+- [ ] Loading
+- [ ] Menus
+- [ ] Sliders
+- [ ] Snackbar
+- [ ] Toggles
+- [ ] Tables
+- [ ] Text Fields
+- [ ] Tooltips
