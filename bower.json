@@ -1,0 +1,21 @@
+{
+  "name": "grow-mdl",
+  "description": "A Grow Material Design Lite Theme",
+  "main": "",
+  "authors": [
+    "Danny Grove <danny@drgrovellc.com> (http://dannygrove.com/)"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "material-design-lite": "^1.2.1"
+  }
+}

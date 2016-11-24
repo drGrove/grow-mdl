@@ -1,0 +1,27 @@
+$title: MDL Components
+$path: /components
+$view: /views/components.html
+
+badges:
+  - content@: email
+    badge: 1
+    overlay: True
+    icon: True
+  - content@: Something
+    badge: 10
+    overlay: True
+  - content@: Something
+    badge: 5
+buttons:
+  - content@: Submit
+    raised: True
+    ripple: True
+  - content@: add
+    ripple: True
+    icon: True
+    fab: True
+  - content@: email
+    icon: True
+    ripple: True
+    fab: True
+    mini_fab: True

@@ -1,0 +1,13 @@
+{% extends "/views/base.html" %}
+{% import "/views/macros/components.html" as macros %}
+
+{% block main %}
+  <h2>Badges</h2>
+  {% for badge in doc.badges %}
+    {{ macros.badge(badge.content, badge.badge, badge.overlay, badge.icon) }}
+  {% endfor %}
+  <h2>Buttons</h2>
+  {% for button in doc.buttons %}
+    {{ macros.button(button.content, button.raised, button.ripple, button.colored, button.accent, button.disabled, button.fab, button.mini_fab, button.icon) }}
+  {% endfor %}
+{% endblock %}
