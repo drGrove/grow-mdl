@@ -24,6 +24,7 @@
     {% endif %}
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="{{g.static('/bower_components/material-design-lite/material.min.css').url.path}}" />
+		<link rel="stylesheet" href="{{g.static('/bower_components/dialog-polyfill/dialog-polyfill.css').url.path}}" />
     <link rel="stylesheet" href="{{g.static('/dist/css/main.min.css').url.path}}">
     {% if podspec.meta.google_analytics_id %}
     <script>
@@ -52,5 +53,7 @@
     </div>
     {% include "/views/_footer.html" %}
     <script src="{{g.static('/bower_components/material-design-lite/material.min.js').url.path}}"></script>
+    <script src="{{g.static('/bower_components/dialog-polyfill/dialog-polyfill.js').url.path}}"></script>
+    <script src="{{g.static('/dist/js/main.min.js').url.path}}"></script>
   </body>
 </html>

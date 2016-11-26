@@ -5,7 +5,7 @@
   {% endif %}
   {% if overlap %}
     {% do class.append('mdl-badge--overlap') %}
-  {% endif %}
+  jj{% endif %}
   {% if icon %}
   <div
     class="{{ class|join(' ') }}"
@@ -46,9 +46,16 @@
   {% if button_options.icon %}
     {% do class.append('mdl-button--icon') %}
   {% endif %}
+  {% if button_options.class %}
+    {% do class.append(button_options.class) %}
+  {% endif %}
   <button
     class="{{ class | join(' ') }}"
-    {%- if disabled %} disabled {%- endif -%}
+    type="{{button_options.type or 'button'}}"
+    {%- if button_options.target %}
+      target="{{button_options.target_type}}{{button_options.target}}"
+    {% endif %}
+    {%- if button_options.disabled %} disabled {%- endif -%}
   >
     {% if button_options.icon %}
     <i class="material-icons">
@@ -132,4 +139,35 @@
       </span>
     </span>
   {% endif %}
+{% endmacro %}
+
+{% macro dialog(dialog_options) %}
+  {% do dialog_options.initializer.update({'target_type': 'dialog-'}) %}
+  {{ button(dialog_options.initializer) }}
+  <dialog
+    class="mdl-dialog"
+    id="dialog-{{dialog_options.initializer.target}}"
+    data-close-target="{{dialog_options.close_class}}"
+  >
+    <h4 class="mdl-dialog__title">
+      {{ _(dialog_options.title) }}
+    </h4>
+    <div class="mdl-dialog__content">
+      <p>{{ _(dialog_options.content) }}</p>
+      <p class="errors"></p>
+    </div>
+    {% if dialog_options.actions %}
+    <div
+      {% if dialog_options.actions_full_width %}
+        class="mdl-dialog__actions mdl-dialog__actions--full-width"
+      {% else %}
+        class="mdl-dialog__actions"
+      {% endif %}
+    >
+      {% for action in dialog_options.actions -%}
+        {{ button(action) }}
+      {%- endfor %}
+    </div>
+    {% endif %}
+  </dialog>
 {% endmacro %}

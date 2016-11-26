@@ -78,3 +78,33 @@ chips:
     contact_background: teal
     contact_foreground: white
     contact_content@: A
+dialogs:
+  - title@: Allow data collection?
+    content@: |
+      Allowing us to collect data will let us get you the information you want
+      faster.
+    close_class: close
+    initializer:
+      content@: Show Dialog
+      target: collect-data
+      raised: True
+      ripple: True
+    actions:
+      - content@: Disagree
+        class: close
+      - content@: Agree
+        colored: True
+  - title@: Get Current Location?
+    content@: Can we have access to your current location?
+    close_class: close
+    initializer:
+      content@: Show Location
+      target: show-location
+      raised: True
+      ripple: True
+    actions:
+      - content@: Disagree
+        class: close
+      - content@: Agree
+        class: agree
+        colored: True

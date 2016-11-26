@@ -33,3 +33,6 @@ preprocessors:
   name: sass
   sass_dir: /source/sass/
   out_dir: /dist/css/
+- kind: gulp
+  run_task: "default"
+  build_task: "build --production"

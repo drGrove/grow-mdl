@@ -48,7 +48,7 @@ grow stage
 - [x] Buttons
 - [x] Cards
 - [x] Chips
-- [ ] Dialogs
+- [x] Dialogs
 - [ ] Layout
 - [ ] Lists
 - [ ] Loading

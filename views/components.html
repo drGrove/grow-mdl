@@ -25,4 +25,9 @@
   {% for chip in doc.chips %}
     {{ components.chip(chip) }}
   {% endfor %}
+
+  <h2>Dialogs</h2>
+  {% for dialog in doc.dialogs -%}
+    {{ components.dialog(dialog) }}
+  {%- endfor %}
 {% endblock %}
