@@ -171,3 +171,67 @@
     {% endif %}
   </dialog>
 {% endmacro %}
+
+{% macro list(items) %}
+  <ul class="mdl-list">
+    {% for item in items %}
+    <li
+      {% if item is mapping %}
+        {% if item.type == 'two-line' %}
+          class="mdl-list__item mdl-list__item--two-line"
+        {% elif item.type == 'three-line' %}
+          class="mdl-list__item mdl-list__item--three-line"
+        {% else %}
+          class="mdl-list__item"
+        {% endif %}
+      {% else %}
+      class="mdl-list__item"
+      {% endif %}
+    >
+      <span class="mdl-list__item-primary-content">
+        {% if item is mapping and item.primary.preface_content %}
+        <i
+          class="material-icons mdl-list__item-{{item.primary.preface_type or 'icon'}}"
+        >
+          {{ item.primary.preface_content }}
+        </i>
+        {% endif %}
+        <span>
+          {{ _(item.primary.content if item is mapping else item) }}
+        </span>
+        {% if item is mapping and item.primary.subtitle -%}
+          <span class="mdl-list__item-sub-title">
+            {{ _(item.primary.subtitle) }}
+          </span>
+        {%- endif %}
+        {% if item is mapping and item.primary.body -%}
+          <span class="mdl-list__item-text-body">
+            {{ _(item.primary.body) }}
+          </span>
+        {% endif %}
+      </span>
+      {% if item is mapping and item.secondary %}
+        <span class="mdl-list__item-secondary-content">
+          {% if item.secondary.info %}
+            <span class="mdl-list__item-secondary-info">
+              {{ _(item.secondary.info) }}
+            </span>
+          {% endif %}
+          {% if item.secondary.action %}
+            <a
+              class="mdl-list__item-secondary-action"
+              href="{{ item.secondary.action.link }}"
+            >
+              {% if item.secondary.action.icon %}
+              <i class="material-icons">{{ item.secondary.action.icon }}</i>
+              {% else %}
+              {{ _(item.secondary.action.content) }}
+              {% endif %}
+            </a>
+          {% endif %}
+        </span>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}

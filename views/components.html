@@ -30,4 +30,17 @@
   {% for dialog in doc.dialogs -%}
     {{ components.dialog(dialog) }}
   {%- endfor %}
+
+  <h2>Lists</h2>
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col">
+      {{ components.list(doc.lists.simple) }}
+    </div>
+    <div class="mdl-cell mdl-cell--4-col">
+      {{ components.list(doc.lists.icons) }}
+    </div>
+    <div class="mdl-cell mdl-cell--4-col">
+      {{ components.list(doc.lists.avatar_subtitle) }}
+    </div>
+  </div>
 {% endblock %}

@@ -108,3 +108,50 @@ dialogs:
       - content@: Agree
         class: agree
         colored: True
+lists:
+  simple:
+    - Bryan Cranston
+    - Aaron Paul
+    - Bob Odenkrik
+  icons:
+    - primary:
+        content: Bryan Cranston
+        preface_type: icon
+        preface_content: person
+    - primary:
+        content: Aaron Paul
+        preface_type: icon
+        preface_content: person
+    - primary:
+        content: Bob Odenkrik
+        preface_type: icon
+        preface_content: person
+  avatar_subtitle:
+    - type: two-line
+      primary:
+        content: Bryan Cranston
+        subtitle: 63 episodes
+        preface_type: avatar
+        preface_content: person
+      secondary:
+        info: actor
+        action:
+          link: #
+          icon: star
+    - primary:
+        content: Aaron Paul
+        preface_type: avatar
+        preface_content: person
+      secondary:
+        action:
+          link: #
+          icon: star
+    - primary:
+        content: Bob Odenkrik
+        preface_type: avatar
+        preface_content: person
+      secondary:
+        action:
+          link: #
+          icon: star
+
