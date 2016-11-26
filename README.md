@@ -50,7 +50,7 @@ grow stage
 - [x] Chips
 - [x] Dialogs
 - [ ] Layout
-- [ ] Lists
+- [x] Lists
 - [ ] Loading
 - [ ] Menus
 - [ ] Sliders
